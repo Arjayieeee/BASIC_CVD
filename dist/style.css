@@ -1,9 +1,9 @@
 /*-------Resets-------*/
-/* {
+*{
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
-  } */
+  }
   *:before,
   *:after {
     -webkit-box-sizing: border-box;
@@ -122,11 +122,21 @@
     width: 100%;
     padding: 1rem;
     margin: 0 auto;
-} 
+}
 
+
+    @media screen and (max-width:468px) {
+    .container{
+            width: 100%;
+        }        
+    }
+
+/*------------HEADER-------*/
 
 .header{
     background: #2b2b2b;
+    padding: 2rem 0;
+  
     
 }
 .header .branding img{
@@ -166,5 +176,42 @@
 .header .header__nav ul li:hover a{
     color: #ffa700;
 }
+.toggle__menu{
+    display: none;
+}
+.toggle__menu span{
+    width: 3.5rem;
+    height: .3rem;
+    background-color: #ffa700;
+    display: block;
+    margin-bottom: .5rem;
+    border-radius: 5rem ;
+}
 
-    
+@media screen and (max-width:500px) {
+    .toggle__menu{
+        display: block;
+    }
+    .header .header__nav{
+        position: absolute;
+        top: 9.5rem;
+        background: #ffffff;
+        left: 0;
+        width: 100%;
+    }
+
+    .header .header__nav ul{
+        display: block;
+        text-align: center;
+        height: 100vh;
+    }
+    .header .header__nav ul li{
+        margin-left: 0;
+        
+    }
+    .header .header__nav ul li a{
+       
+        color: #2b2b2b;
+        font-size: 3rem;
+    }
+}
