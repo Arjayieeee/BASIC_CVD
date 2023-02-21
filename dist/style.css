@@ -125,7 +125,7 @@
 }
 
 
-    @media screen and (max-width:468px) {
+    @media screen and (max-width:500px) {
     .container{
             width: 100%;
         }        
@@ -136,16 +136,19 @@
 .header{
     background: #2b2b2b;
     padding: 2rem 0;
+    position: fixed;
+    position: relative;
+    width: 100%;
   
     
 }
 .header .branding img{
     width: 3.5rem;
-    font-size: 2rem;
+    
 }
 .header .branding h2{
     color:#ffffff;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-left: 1rem;
 }
 .header .branding{
@@ -178,6 +181,7 @@
 }
 .toggle__menu{
     display: none;
+
 }
 .toggle__menu span{
     width: 3.5rem;
@@ -186,6 +190,19 @@
     display: block;
     margin-bottom: .5rem;
     border-radius: 5rem ;
+    transition: .5s ease;
+}
+.toggle__menu.open span:first-child{
+    transform: translate(0,10px)rotate(225deg);
+    transition: .5s ease;
+}
+.toggle__menu.open span:nth-child(2){
+    opacity: 0;
+   
+}
+.toggle__menu.open span:last-child{
+    transform: translate(0,-6px)rotate(-225deg);
+    transition: .5s ease;
 }
 
 @media screen and (max-width:500px) {
@@ -193,25 +210,114 @@
         display: block;
     }
     .header .header__nav{
+        
         position: absolute;
         top: 9.5rem;
         background: #ffffff;
-        left: 0;
+        right: -100rem;
         width: 100%;
+        height: 100vh;
+        transition: .5s ease;
+        
     }
-
     .header .header__nav ul{
         display: block;
         text-align: center;
-        height: 100vh;
     }
+
     .header .header__nav ul li{
         margin-left: 0;
+        border-bottom: 1px solid #2b2b2b;
         
     }
     .header .header__nav ul li a{
-       
         color: #2b2b2b;
         font-size: 3rem;
     }
+    .header .header__nav ul li:hover{
+        background: hsl(0, 0%, 50%);
+    }
+    .header__nav.open{
+        right: 0;
+        transition: .5s ease;
+    }
+    
 }
+
+/*-------------BANNER---------*/
+
+.banner{
+    background: #ffffff;
+    padding: 5rem 0;
+    padding-top: 10rem;
+}
+.banner .banner__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   
+  
+}
+.banner .banner__text h1{
+    color: #ffa700;
+    font-size: 8rem;
+    font-weight: 800;
+    max-width: 40rem;
+    line-height: 1.2;
+}
+.banner .banner__text h1{
+    margin-right: 10rem;
+}
+.banner .banner__text p{
+    max-width: 40rem;
+    text-align: justify;
+    margin: 3rem 0;
+}
+.banner a{
+    text-transform: uppercase;
+}
+
+/*-------------REPEATABLE PATTERNSS---------*/
+.btn{
+    padding: 1.2rem 1.5rem;
+    background:#ffa700 ;
+    color: white;
+    border-radius: 5rem;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.bg--yellow{
+    background: #ffa700;
+    color: #ffffff;
+}
+.bg--dark{
+    background: #2b2b2b;
+}
+.bg--yellow:hover{
+    background: #2b2b2b;
+    border: 1px solid #ffa700;
+}
+
+@media screen and (max-width:500px) {
+   .banner .banner__wrapper{
+       flex-direction: column-reverse;
+    }
+    .banner .banner__text{
+        margin-right: 0;
+        text-align: center;
+    }
+    .banner img{
+        margin-bottom: 3rem;
+        width: 20rem;
+        margin-left: 0;
+    }
+    .banner .banner__text h1{
+        max-width: fit-content;
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+    
+}
+    
+
