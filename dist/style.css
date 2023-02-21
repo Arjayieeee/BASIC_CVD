@@ -273,8 +273,9 @@
     text-align: justify;
     margin: 3rem 0;
 }
-.banner a{
+.banner a#banner__btn{
     text-transform: uppercase;
+    border: 1px solid transparent !important;
 }
 
 /*-------------REPEATABLE PATTERNSS---------*/
