@@ -158,7 +158,7 @@
 }
 .header .header__nav ul{
     list-style: none;
-    display: none;
+   display: flex;
 }
 .header .header__nav ul li a{
     text-decoration: none;
@@ -355,6 +355,9 @@
 }
 
 @media screen and (max-width:500px){
+    .hm-services{
+        padding: 1rem;
+    }
     .hm-services .hm-services__item{
         margin: 10rem 5rem;
     }
@@ -493,4 +496,226 @@
     .latest .latest__title{
         margin: 5rem 5rem;
     }
+}
+
+/*-------------CONTACT BANNER-----------*/
+.contact{
+    text-align: center;
+    background: #ffa700;
+}
+.contact .contact__wrapper h2{ 
+    font-weight: 600; 
+    font-size: 2.5rem;
+    margin-top: 4rem;
+}
+.contact .contact__wrapper p{ 
+    
+    font-weight: 500;
+}
+.bg--dark:hover{
+    background: #ffa700;
+    border: 1px solid #2b2b2b;
+}
+.contact a#contact__btn{
+    margin: 3rem 0  ;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:500px) {
+    .contact .contact__wrapper h2{
+     font-size: 2rem;       
+    }
+    
+}
+
+/*-------------FOOTER-----------*/
+.footer{
+    background: #2b2b2b;
+    padding: 2rem 0;
+    color: #ffffff;
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__wrapper .item{
+    display: flex;
+    width: auto;
+    opacity: 50%;
+    text-align: center;
+    font-size: 2rem;
+    
+    
+}
+.footer__wrapper .item i{
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 3rem;
+    opacity: 50%;
+}
+.footer__wrapper .item .fa-facebook:hover{
+    color: #ffa700;
+}
+.footer__wrapper .item .fa-twitter:hover{
+    color: #ffa700;
+}
+.footer__wrapper .item .fa-instagram:hover{
+    color: #ffa700;
+}
+.footer__wrapper .item .fa-youtube:hover{
+    color: #ffa700;
+}
+.footer__wrapper .item .fa-envelope:hover{
+    color: #ffa700;
+}
+
+.footer__wrapper p{
+    font-size: 2rem;
+    opacity: 50%;
+}
+@media screen and (max-width:500px) {
+    .footer__wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer__wrapper .item{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .footer__wrapper .item p{
+        opacity: 50%;
+        
+    }
+  
+    
+}
+
+/*-------------ABOUT_Banner-----------*/
+.aboutpage{
+    background: #ffffff;
+    padding-top: 22rem;
+}
+.chevron i{
+    font-size: 5rem;
+}
+.chevron i:hover{
+    color:#2b2b2b ;
+}
+.aboutpage .container .abt_wrapper{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.abt_title p{
+    font-size: 2rem;
+}
+.left .abt_title h1{
+    color: #ffa700;
+    font-size: 9rem;
+    font-weight: 700;
+}
+.content p{
+    max-width: 50rem;
+    text-align: justify;
+    margin: 3rem 0;
+    font-size: 2rem;
+}
+.icon{
+    color: #ffa700;
+    font-size: 4rem;
+}
+
+.icon .fa-facebook:hover{
+    color: #2b2b2b;
+}
+
+.icon .fa-instagram:hover{
+    color: #2b2b2b;
+}
+.icon .fa-twitter:hover{
+    color: #2b2b2b;
+}
+.icon .fa-youtube:hover{
+    color: #2b2b2b;
+}
+.abt_title .picture img{
+   padding-left: 10rem;
+}
+.aboutpage .chevron{
+    color: #ffa700;
+   text-align: center;
+
+}
+
+@media screen and (max-width:500px) {
+    .abt_wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }   
+    .abt_title p{
+        padding: 0 2rem;
+        text-align: center;
+    }
+    .abt_title h1{
+        padding: 0 2rem;
+        text-align: center;
+    }
+     .content p{
+        padding: 0 2rem;
+    }
+    .icon ul{
+        padding: 0 2rem;
+    }
+    .chevron i:hover{
+        color:#2b2b2b ;
+    }
+    
+
+}
+/*------PROJECT-------*/
+
+.myproject{
+    background: #2b2b2b;
+    padding: 5rem 0 ;
+}
+.project_text h1{
+    font-size: 5rem;
+    color: #ffa700;
+}
+.project_text p{
+    color: #ffffff;
+    padding-bottom: 7rem;
+    font-size: 2rem;
+    
+}
+.card{
+    background: #ffffff;
+    border-radius: 3rem;
+}
+.project_title{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.card img{
+    width: 100%;
+}
+.card h4{
+    color: #ffa700;
+    padding: 0 2rem;
+}
+.card p{
+    padding: 4rem 2rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:500px) {
+    .project_title{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 5rem;
+    }   
 }
